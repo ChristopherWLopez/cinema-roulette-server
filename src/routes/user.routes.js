@@ -19,7 +19,7 @@ async function getUsers(_,res){
 async function getUser(req, res, next){
     const id = req.params.id;
     const user = await User.findOne({
-        where: {id:id},
+        where: { id:id },
         include: Hobby,
     });
     if(user===null){
@@ -29,7 +29,7 @@ async function getUser(req, res, next){
             id: user.id,
             username: user.username,
             birthday: user.birthday,
-            hobbies: user.Hobbies.map((hobby)=> hobby.name),
+            // hobbies: user.Hobbies.map((hobby)=> hobby.name),
         };
         res.json(rawUser);
     }

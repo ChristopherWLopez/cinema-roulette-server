@@ -13,6 +13,10 @@ const nameValidator = (req, res, next)=>{
     }
 }
 
+function logger(req, _, next){
+    console.log(req,path);
+    next();
+}
 
 module.exports = {
     server,

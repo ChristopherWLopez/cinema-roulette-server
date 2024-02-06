@@ -5,7 +5,7 @@ const { sequelize } = require('../../models');
 COMPLEXITY = 8;
 
 //establish what the user object looks like and its properties that defines this object. 
-function makeUser(sequelize);{
+function makeUser(sequelize){
     const User = sequelize.define('User', {
         username: DataTypes.STRING,
         password: DataTypes.STRING,
